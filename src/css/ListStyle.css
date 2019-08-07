@@ -1,0 +1,88 @@
+html {
+    background: #e7e7e7;
+}
+
+body {
+    height: 100vh;
+    overflow: scroll-y;
+}
+
+.container-TODO {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    width: 50%;
+    height: 90%;
+}
+
+.input-task {
+    font-size: 20px;
+    margin: 5px;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.input-task:focus {
+    /* border-color: rgb(255, 144, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6); */
+    /* outline: 1px dotted rgba(177, 5, 177, 0.849); */
+    /* outline: 1px solid rgb(128, 0, 128);
+    outline-offset: 1px;
+    box-shadow: 0 0 0 5px rgb(128, 0, 128, 0.4); */
+    /* border-radius: 5px; */
+    margin: 5px;
+}
+
+.button-task {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    background: rgb(42, 34, 179, 0.8);
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+}
+
+.lista-tasks>ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-tasks {
+    background: #f0f0f0;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.container-item-list-task {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.item-task {
+    color: rgba(0, 0, 0, 0.8);
+    background: rgb(128, 0, 128, 0.2);
+    padding: 10px;
+}
+
+.btn-eliminar-task {
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    padding: 0 5px;
+    text-align: center;
+    right: -8px;
+    top: -15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .4);
+}
+
+.btn-eliminar-task:hover {
+    cursor: pointer;
+}
