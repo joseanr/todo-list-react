@@ -7,7 +7,7 @@ class InputTasks extends Component {
         this.handleKeyUp = this.handleKeyUp.bind(this);
         this.handleOnClick = this.handleOnClick.bind(this);
     }
-
+    
     
     sendInputValue() {
         this.props.onChangeText(this.state.value);
@@ -41,7 +41,7 @@ class InputTasks extends Component {
         return (
             <div>
                 <input id="input-task" className="input-task" type="text" onKeyUp={this.handleKeyUp} />
-                <a href="#" className="button-task" onClick={this.handleOnClick}> Agregar tarea </a>
+                <a href="#" className="button-task" onClick={this.handleOnClick}> Add task </a>
             </div>
         );
     }

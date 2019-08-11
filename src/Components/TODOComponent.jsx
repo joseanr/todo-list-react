@@ -24,20 +24,23 @@ class TODO extends Component {
     }
 
     handleUpdateListTasks(newListTasks, newListKeys) {
-        this.setState({ 
+        this.setState({
             tasks: newListTasks,
             keys: newListKeys
         });
     }
 
+    
 
     render() {
 
         return (
             <div className="container-TODO">
                 <div>
-                    <h2> Tienes algunas cosas por hacer?! </h2>
+                    <h2> Do you have some activite to remember later?! </h2>
+                    <h3> Write down here! </h3>
                 </div>
+                
                 <InputTasks onChangeText={this.handleChangeText} />
                 <ListTasks
                     tasks={this.state.tasks}
