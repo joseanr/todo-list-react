@@ -8,28 +8,31 @@ class ListTasks extends Component {
         this.handleDeleteItem = this.handleDeleteItem.bind(this);
     }
 
-    handleUpdate
+    handleDeleteItem(newListTask, key) {
+        let index = this.props.keys.indexOf(key);
+        this.props.keys.splice(index, 1);
 
-    handleDeleteItem(elementToDelete) {
-        // Eliminar elemento de arreglo
-        const index  = this.props.tasks.indexOf(elementToDelete);
-        this.props.tasks.splice(index, 1);
-
-        // envio del arreglo
-        this.props.onUpdateListTasks(this.props.tasks);
+        this.props.onUpdateListTasks(newListTask, this.props.keys);
     }
 
     render() {
-        const tasks = this.props.tasks.map((task, index) => <ItemListTask key={index} task={task} onDeleteItem={this.handleDeleteItem} />);
+        let elements = [...this.props.tasks].map((task, index) =>
+            <ItemListTask
+                tasks={ this.props.tasks }
+                key={index}
+                keyTask={this.props.keys[index]}
+                tasks={this.props.tasks}
+                onDeleteItem={this.handleDeleteItem} />);
 
         return (
-            <div  className="lista-tasks">
-                <ul >
-                    { tasks }
+            <div className="lista-tasks">
+                <ul>
+                    {elements}
                 </ul>
             </div>
         );
     }
 }
+
 
 export default ListTasks;

@@ -7,6 +7,7 @@ class InputTasks extends Component {
         this.handleKeyUp = this.handleKeyUp.bind(this);
         this.handleOnClick = this.handleOnClick.bind(this);
     }
+
     
     sendInputValue() {
         this.props.onChangeText(this.state.value);
